@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Xnjui
+from home.models import Fhhj,Xnjui
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class XnjuiSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Xnjui
+        fields = "__all__"
+
+class FhhjSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Fhhj
         fields = "__all__"

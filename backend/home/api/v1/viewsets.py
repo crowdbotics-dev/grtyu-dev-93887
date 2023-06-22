@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Xnjui
-from .serializers import XnjuiSerializer
+from home.models import Fhhj,Xnjui
+from .serializers import FhhjSerializer,XnjuiSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class XnjuiViewSet(viewsets.ModelViewSet):
     serializer_class = XnjuiSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Xnjui.objects.all()
+
+class FhhjViewSet(viewsets.ModelViewSet):
+    serializer_class = FhhjSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Fhhj.objects.all()
